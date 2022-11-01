@@ -9,6 +9,7 @@ score = 0
 times_played = 0
 question = input("Do you want to play? ")
 
+#Update scores
 def update_stats():
     global score
     global times_played
@@ -20,6 +21,7 @@ def update_stats():
 
     times_played += 1
 
+#Game Loop/Checks
 while question == "yes".lower():
     comp_answer = random.choice(rps)
     human_input = input("Rock, Paper or Scissors? ").lower()
