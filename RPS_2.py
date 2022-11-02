@@ -1,8 +1,6 @@
 import random
 
 #Variables
-rps = ["rock", "paper", "scissors"]
-
 winner_dict = {'rock': 'scissors', 'paper': 'rock', 'scissors': 'paper'}
 
 score = 0
@@ -23,7 +21,7 @@ def update_stats():
 
 #Game Loop/Checks
 while question == "yes".lower():
-    comp_answer = random.choice(rps)
+    comp_answer = random.choice(list(winner_dict.keys()))
     human_input = input("Rock, Paper or Scissors? ").lower()
 
     if winner_dict[human_input] == comp_answer:
